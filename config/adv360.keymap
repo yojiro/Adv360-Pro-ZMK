@@ -6,11 +6,11 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#include "macros.dtsi"
-#include "version.dtsi"
-
 / {
     behaviors {
+      #include "macros.dtsi"
+      #include "version.dtsi"
+
       hm: homerow_mods {
           compatible = "zmk,behavior-hold-tap";
           label = "HOMEROW_MODS";
@@ -64,6 +64,25 @@
         &none &none        &none        &none        &macro_ver   &none                                      &none &none                                                        &none        &none        &none        &none &none &none
         &none &none        &none        &none        &none                                       &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none &none &none
       >;
+    };
+    extra1 { 
+      display-name = "Red";    
+      status = "reserved";
+    };
+
+    extra2 { 
+      display-name = "Purple";    
+      status = "reserved";
+    };
+
+    extra3 { 
+      display-name = "Cyan";    
+      status = "reserved";
+    };
+
+    extra4 { 
+      display-name = "Yellow";    
+      status = "reserved";
     };
   };
 };
